@@ -295,6 +295,29 @@ Data (Repository Impl, DataSource, API)
 
 모든 주목할만한 변경사항은 이 섹션에 문서화됩니다.
 
+### [1.2.1] - 2026-01-31
+
+#### Changed
+- **Skill 파일 구조 변경**
+  - 단일 파일 구조 (`skills/skill-name.md`) → 디렉토리 구조 (`skills/skill-name/SKILL.md`)로 변경
+  - 향후 각 skill에 지원 파일(예제, 템플릿, 스크립트) 추가 가능하도록 확장성 확보
+  - plugin.json의 skills 경로를 디렉토리 경로로 업데이트
+  - 모든 skill 파일명을 `SKILL.md`로 통일
+
+### [1.2.0] - 2026-01-31
+
+#### Added
+- **버전 관리 자동화 도구**
+  - `scripts/bump-version.sh`: Semantic Versioning 기반 자동 버전 업데이트 스크립트
+  - plugin.json, marketplace.json, README 자동 업데이트
+  - Changelog 자동 생성
+
+#### Fixed
+- **plugin.json manifest 수정**
+  - `agents` 필드: 디렉토리 경로 → 개별 파일 경로로 명시
+  - `skills` 필드: 디렉토리 경로 → 개별 파일 경로로 명시
+  - "agents: Invalid input" 검증 오류 해결
+
 ### [1.1.1] - 2026-01-31
 
 #### Fixed

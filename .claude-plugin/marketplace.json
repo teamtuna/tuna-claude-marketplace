@@ -13,7 +13,7 @@
       "name": "android-reviewer",
       "source": "./plugins/android-reviewer",
       "description": "Android/Kotlin 코드 리뷰 전문 Agent",
-      "version": "1.2.0",
+      "version": "1.2.1",
       "author": {
         "name": "Team Tuna"
       },

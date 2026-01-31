@@ -1,6 +1,6 @@
 {
   "name": "android-reviewer",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Android/Kotlin 코드 리뷰 전문 Agent & Skills",
   "author": {
     "name": "Team Tuna"
@@ -12,10 +12,10 @@
     "./agents/android-code-reviewer.md"
   ],
   "skills": [
-    "./skills/review-pr.md",
-    "./skills/review-compose.md",
-    "./skills/review-architecture.md",
-    "./skills/review-security.md",
-    "./skills/review-test.md"
+    "./skills/review-pr/",
+    "./skills/review-compose/",
+    "./skills/review-architecture/",
+    "./skills/review-security/",
+    "./skills/review-test/"
   ]
 }
