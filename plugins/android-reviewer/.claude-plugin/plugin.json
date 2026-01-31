@@ -1,12 +1,13 @@
 {
   "name": "android-reviewer",
   "version": "1.0.0",
-  "description": "Android/Kotlin 코드 리뷰 전문 Agent",
+  "description": "Android/Kotlin 코드 리뷰 전문 Agent & Skills",
   "author": {
     "name": "Team Tuna"
   },
   "repository": "https://github.com/teamtuna/tuna-claude-marketplace",
   "license": "MIT",
   "keywords": ["android", "kotlin", "compose", "code-review"],
-  "agents": ["./agents/"]
+  "agents": ["./agents/"],
+  "skills": ["./skills/"]
 }
