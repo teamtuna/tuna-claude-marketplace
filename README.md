@@ -129,6 +129,17 @@ Android/Kotlin 코드 리뷰 전문 Agent & Skills
 /review:test --run
 ```
 
+## 버전 히스토리
+
+### android-reviewer
+
+| 버전 | 날짜 | 변경사항 |
+|------|------|----------|
+| **v1.1.0** | 2026-01-31 | 🎉 **5개 리뷰 스킬 추가**<br>• review-pr: PR 변경사항 코드 리뷰<br>• review-compose: Jetpack Compose 성능 검사<br>• review-architecture: 클린 아키텍처 검증<br>• review-security: 보안 취약점 검사<br>• review-test: 테스트 커버리지 검사<br>• 3단계 이슈 분류 (Critical/Warning/Suggestion)<br>• 다양한 옵션 지원 (--full, --strict, --coverage 등)<br>• CI/CD 통합 가이드 포함 |
+| v1.0.0 | 2026-01-31 | 🚀 **초기 릴리즈**<br>• android-code-reviewer agent 추가<br>• Android/Kotlin 코드베이스 전문 리뷰 에이전트 |
+
+---
+
 ## 기여하기
 
 PR 환영합니다! 🎉

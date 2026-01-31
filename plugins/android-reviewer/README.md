@@ -291,6 +291,80 @@ Data (Repository Impl, DataSource, API)
 
 ---
 
+## 📋 변경 이력 (Changelog)
+
+모든 주목할만한 변경사항은 이 섹션에 문서화됩니다.
+
+### [1.1.0] - 2026-01-31
+
+#### Added
+- **5개의 프로덕션 레벨 리뷰 스킬 추가**
+  - `review-pr`: PR 변경사항 코드 리뷰
+    - git diff 기반 변경사항 분석
+    - Critical/Warning/Suggestion 3단계 분류
+    - CI/CD 통합 지원 (--comment 옵션)
+  - `review-compose`: Jetpack Compose 성능 및 패턴 검사
+    - 10가지 안티패턴 검출
+    - Recomposition 최적화 검사
+    - State 관리 및 Side Effect 패턴 검증
+  - `review-architecture`: 클린 아키텍처 검증
+    - 의존성 방향 검증 (Presentation → Domain ← Data)
+    - 레이어 분리 검사
+    - Domain 순수성 검증 (Android 의존성 없음)
+  - `review-security`: 보안 취약점 검사
+    - 하드코딩된 시크릿 탐지
+    - 민감정보 로깅 검사
+    - 암호화 누락 확인
+    - OWASP Mobile Top 10 기반
+  - `review-test`: 테스트 커버리지 및 품질 검사
+    - 테스트 누락 파일 탐지
+    - Jacoco 커버리지 리포트 생성
+    - Given-When-Then 패턴 검증
+
+- **다양한 명령어 옵션 지원**
+  - `--full`: 전체 파일 컨텍스트 포함 분석
+  - `--strict`: 엄격 모드 (모든 Warning 포함)
+  - `--coverage`: 커버리지 리포트 생성
+  - `--run`: 테스트 실행
+  - `--missing`: 누락된 테스트만 확인
+  - `--comment`: 리뷰 결과를 파일로 저장
+  - `--deps`: 의존성만 검사
+  - `--layers`: 레이어 구조만 검사
+  - `--secrets`: 시크릿 검사만 수행
+
+- **실전 사용 시나리오 5가지**
+  - PR 생성 전 워크플로우
+  - Compose UI 개발 후
+  - 아키텍처 리팩토링 후
+  - 릴리즈 전 최종 점검
+  - CI/CD 파이프라인 통합
+
+- **상세 문서화**
+  - 플러그인 README (342줄)
+  - 각 스킬별 상세 가이드 (평균 250줄)
+  - 실제 Kotlin 코드 예제 포함
+  - bash 명령어 샘플 제공
+
+#### Changed
+- plugin.json에 `skills` 디렉토리 추가
+- 플러그인 설명 업데이트: "Agent & Skills" 명시
+
+### [1.0.0] - 2026-01-31
+
+#### Added
+- **android-code-reviewer agent 초기 릴리즈**
+  - Android/Kotlin 코드베이스 전문 리뷰 에이전트
+  - 대화형 코드 리뷰 지원
+  - 멘션 기능 (@android-code-reviewer)
+  - 종합적인 코드베이스 분석
+
+- **기본 플러그인 구조**
+  - plugin.json 설정
+  - agents 디렉토리 구조
+  - MIT 라이선스
+
+---
+
 ## 📚 참고 자료
 
 ### 공식 문서
