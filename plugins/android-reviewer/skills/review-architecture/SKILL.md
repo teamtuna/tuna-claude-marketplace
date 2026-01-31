@@ -232,16 +232,16 @@ object UserDataModule {
 
 ```bash
 # 전체 아키텍처 검사
-/review:architecture
+/review-architecture
 
 # 특정 모듈 검사
-/review:architecture feature/home
+/review-architecture feature/home
 
 # 의존성만 검사
-/review:architecture --deps
+/review-architecture --deps
 
 # 레이어 구조만 검사
-/review:architecture --layers
+/review-architecture --layers
 ```
 
 ## Output Format

@@ -248,16 +248,16 @@ fun isDeviceSecure(): Boolean {
 
 ```bash
 # 전체 보안 검사
-/review:security
+/review-security
 
 # 특정 디렉토리 검사
-/review:security feature/payment/
+/review-security feature/payment/
 
 # 시크릿 검사만
-/review:security --secrets
+/review-security --secrets
 
 # 엄격 모드 (모든 Warning 포함)
-/review:security --strict
+/review-security --strict
 ```
 
 ## Output Format

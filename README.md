@@ -22,11 +22,11 @@ Android/Kotlin 코드 리뷰 전문 Agent & Skills
 
 | 스킬 | 설명 | 명령어 | 주요 기능 |
 |-----|------|--------|----------|
-| **review-pr** | PR 변경사항 코드 리뷰 | `/review:pr [branch] [--full] [--comment]` | git diff 기반, Critical/Warning/Suggestion 분류 |
-| **review-compose** | Jetpack Compose 성능 검사 | `/review:compose [file\|dir] [--strict]` | Recomposition 최적화, State 관리, Side Effect |
-| **review-architecture** | 클린 아키텍처 검증 | `/review:architecture [module] [--deps] [--layers]` | 의존성 방향, 레이어 분리, 패키지 구조 |
-| **review-security** | 보안 취약점 검사 | `/review:security [dir] [--strict] [--secrets]` | 하드코딩 키, 민감정보 로깅, 암호화 누락 |
-| **review-test** | 테스트 커버리지 검사 | `/review:test [module] [--coverage] [--run] [--missing]` | 테스트 누락, 실행, 커버리지 리포트 |
+| **review-pr** | PR 변경사항 코드 리뷰 | `/review-pr [branch] [--full] [--comment]` | git diff 기반, Critical/Warning/Suggestion 분류 |
+| **review-compose** | Jetpack Compose 성능 검사 | `/review-compose [file\|dir] [--strict]` | Recomposition 최적화, State 관리, Side Effect |
+| **review-architecture** | 클린 아키텍처 검증 | `/review-architecture [module] [--deps] [--layers]` | 의존성 방향, 레이어 분리, 패키지 구조 |
+| **review-security** | 보안 취약점 검사 | `/review-security [dir] [--strict] [--secrets]` | 하드코딩 키, 민감정보 로깅, 암호화 누락 |
+| **review-test** | 테스트 커버리지 검사 | `/review-test [module] [--coverage] [--run] [--missing]` | 테스트 누락, 실행, 커버리지 리포트 |
 
 ## 빠른 시작
 
@@ -51,31 +51,31 @@ Android/Kotlin 코드 리뷰 전문 Agent & Skills
 #### PR 리뷰 워크플로우
 ```bash
 # 1. PR 변경사항 리뷰
-/review:pr main
+/review-pr main
 
 # 2. Compose 최적화 검사 (엄격 모드)
-/review:compose --strict
+/review-compose --strict
 
 # 3. 보안 취약점 체크
-/review:security --secrets
+/review-security --secrets
 
 # 4. 테스트 커버리지 확인
-/review:test --coverage
+/review-test --coverage
 
 # 5. 아키텍처 검증
-/review:architecture --deps
+/review-architecture --deps
 ```
 
 #### 특정 영역 집중 검사
 ```bash
 # Compose 파일만 집중 검사
-/review:compose feature/home/ui/
+/review-compose feature/home/ui/
 
 # 결제 모듈 보안 검사
-/review:security feature/payment/
+/review-security feature/payment/
 
 # 특정 모듈 테스트 실행
-/review:test feature/home --run
+/review-test feature/home --run
 ```
 
 ## 주요 특징
@@ -99,34 +99,34 @@ Android/Kotlin 코드 리뷰 전문 Agent & Skills
 ### 시나리오 1: PR 생성 전
 ```bash
 # 셀프 리뷰
-/review:pr
+/review-pr
 
 # 보안 체크
-/review:security
+/review-security
 
 # 테스트 확인
-/review:test --missing
+/review-test --missing
 ```
 
 ### 시나리오 2: 릴리즈 전
 ```bash
 # 전체 보안 검사
-/review:security --strict
+/review-security --strict
 
 # 테스트 커버리지 확인
-/review:test --coverage
+/review-test --coverage
 
 # 아키텍처 검증
-/review:architecture
+/review-architecture
 ```
 
 ### 시나리오 3: Compose 리팩토링 후
 ```bash
 # Compose 성능 검사
-/review:compose --strict
+/review-compose --strict
 
 # UI 테스트 확인
-/review:test --run
+/review-test --run
 ```
 
 ## 버전 히스토리

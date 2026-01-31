@@ -14,7 +14,7 @@ Android/Kotlin 프로젝트를 위한 전문 코드 리뷰 Agent & Skills 모음
 
 **명령어:**
 ```bash
-/review:pr [branch] [--full] [--comment]
+/review-pr [branch] [--full] [--comment]
 ```
 
 **옵션:**
@@ -36,7 +36,7 @@ Android/Kotlin 프로젝트를 위한 전문 코드 리뷰 Agent & Skills 모음
 
 **명령어:**
 ```bash
-/review:compose [file|directory] [--strict]
+/review-compose [file|directory] [--strict]
 ```
 
 **옵션:**
@@ -69,7 +69,7 @@ Android/Kotlin 프로젝트를 위한 전문 코드 리뷰 Agent & Skills 모음
 
 **명령어:**
 ```bash
-/review:architecture [module] [--deps] [--layers]
+/review-architecture [module] [--deps] [--layers]
 ```
 
 **옵션:**
@@ -100,7 +100,7 @@ Data (Repository Impl, DataSource, API)
 
 **명령어:**
 ```bash
-/review:security [file|directory] [--strict] [--secrets]
+/review-security [file|directory] [--strict] [--secrets]
 ```
 
 **옵션:**
@@ -132,7 +132,7 @@ Data (Repository Impl, DataSource, API)
 
 **명령어:**
 ```bash
-/review:test [module] [--coverage] [--run] [--missing]
+/review-test [module] [--coverage] [--run] [--missing]
 ```
 
 **옵션:**
@@ -159,52 +159,52 @@ Data (Repository Impl, DataSource, API)
 ### 시나리오 1: PR 생성 전 워크플로우
 ```bash
 # 1. 셀프 리뷰
-/review:pr
+/review-pr
 
 # 2. 테스트 누락 확인
-/review:test --missing
+/review-test --missing
 
 # 3. 보안 체크
-/review:security --secrets
+/review-security --secrets
 
 # 4. 전체 테스트 실행
-/review:test --run
+/review-test --run
 ```
 
 ### 시나리오 2: Compose UI 개발 후
 ```bash
 # 1. Compose 최적화 검사
-/review:compose feature/home/ui/ --strict
+/review-compose feature/home/ui/ --strict
 
 # 2. UI 테스트 확인
-/review:test feature/home --run
+/review-test feature/home --run
 
 # 3. 변경사항 리뷰
-/review:pr develop
+/review-pr develop
 ```
 
 ### 시나리오 3: 아키텍처 리팩토링 후
 ```bash
 # 1. 레이어 분리 검증
-/review:architecture --layers
+/review-architecture --layers
 
 # 2. 의존성 방향 확인
-/review:architecture --deps
+/review-architecture --deps
 
 # 3. 전체 아키텍처 검증
-/review:architecture
+/review-architecture
 ```
 
 ### 시나리오 4: 릴리즈 전 최종 점검
 ```bash
 # 1. 보안 취약점 전체 검사
-/review:security --strict
+/review-security --strict
 
 # 2. 테스트 커버리지 확인
-/review:test --coverage
+/review-test --coverage
 
 # 3. PR 최종 리뷰
-/review:pr main --full
+/review-pr main --full
 
 # 4. Agent 종합 분석
 @android-code-reviewer 릴리즈 전 최종 점검해줘. 위험 요소와 개선 방안을 우선순위별로 정리해줘.
@@ -215,18 +215,18 @@ Data (Repository Impl, DataSource, API)
 # GitHub Actions 예시
 - name: Code Review
   run: |
-    /review:pr --comment > pr-review.md
+    /review-pr --comment > pr-review.md
     gh pr comment --body-file pr-review.md
 
 - name: Security Check
   run: |
-    /review:security --strict
+    /review-security --strict
     if [ $? -ne 0 ]; then exit 1; fi
 
 - name: Test Coverage
   run: |
-    /review:test --coverage
-    /review:test --run
+    /review-test --coverage
+    /review-test --run
 ```
 
 ---
@@ -250,10 +250,10 @@ Data (Repository Impl, DataSource, API)
 ### 조합 사용 예시
 ```bash
 # 1. Skills로 자동화된 검사
-/review:pr main
-/review:compose --strict
-/review:security
-/review:test --coverage
+/review-pr main
+/review-compose --strict
+/review-security
+/review-test --coverage
 
 # 2. Agent로 종합 분석
 @android-code-reviewer 위 리뷰 결과를 종합해서:
@@ -294,6 +294,12 @@ Data (Repository Impl, DataSource, API)
 ## 📋 변경 이력 (Changelog)
 
 모든 주목할만한 변경사항은 이 섹션에 문서화됩니다.
+
+### [1.2.3] - 2026-01-31
+
+#### Fixed
+- Update all command usage examples to use short format (/review-pr instead of /review:pr)
+
 
 ### [1.2.2] - 2026-01-31
 

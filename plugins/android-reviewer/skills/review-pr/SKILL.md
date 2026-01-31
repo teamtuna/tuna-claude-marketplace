@@ -105,16 +105,16 @@ git diff main...HEAD --name-only | xargs grep -l "fun \|class "
 
 ```bash
 # 기본 리뷰 (main 브랜치 대비)
-/review:pr
+/review-pr
 
 # 특정 브랜치 대비 리뷰
-/review:pr develop
+/review-pr develop
 
 # 전체 파일 컨텍스트 포함 리뷰
-/review:pr --full
+/review-pr --full
 
 # 리뷰 결과를 파일로 저장
-/review:pr --comment
+/review-pr --comment
 ```
 
 ## Review Focus Areas
@@ -166,7 +166,7 @@ items(list, key = { it.id }) { item -> ItemCard(item) }
 ### PR 생성 전 워크플로우
 ```bash
 # 1. 셀프 리뷰
-/review:pr
+/review-pr
 
 # 2. 린트 검사
 /lint
@@ -181,7 +181,7 @@ gh pr create
 ### CI 연동
 ```bash
 # GitHub Actions에서 자동 리뷰 코멘트
-/review:pr --comment > pr-review.md
+/review-pr --comment > pr-review.md
 gh pr comment --body-file pr-review.md
 ```
 

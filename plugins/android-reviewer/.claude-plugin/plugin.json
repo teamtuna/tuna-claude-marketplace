@@ -1,6 +1,6 @@
 {
   "name": "android-reviewer",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Android/Kotlin 코드 리뷰 전문 Agent & Skills",
   "author": {
     "name": "Team Tuna"

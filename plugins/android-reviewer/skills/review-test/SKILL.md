@@ -313,19 +313,19 @@ class UserScreenTest {
 
 ```bash
 # 변경된 파일의 테스트 존재 여부 확인
-/review:test --missing
+/review-test --missing
 
 # 테스트 실행
-/review:test --run
+/review-test --run
 
 # 특정 모듈 테스트 실행
-/review:test feature/home --run
+/review-test feature/home --run
 
 # 커버리지 리포트 생성
-/review:test --coverage
+/review-test --coverage
 
 # 전체 검사 (누락 확인 + 실행 + 커버리지)
-/review:test --all
+/review-test --all
 ```
 
 ## Output Format

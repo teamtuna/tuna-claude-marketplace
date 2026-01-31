@@ -221,16 +221,16 @@ data class User(val id: String, val name: String)
 
 ```bash
 # 현재 디렉토리 검사
-/review:compose
+/review-compose
 
 # 특정 파일 검사
-/review:compose HomeScreen.kt
+/review-compose HomeScreen.kt
 
 # 특정 디렉토리 검사
-/review:compose ./feature/feed/ui/
+/review-compose ./feature/feed/ui/
 
 # 엄격 모드 (모든 Warning 포함)
-/review:compose --strict
+/review-compose --strict
 ```
 
 ## Output Format
