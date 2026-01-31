@@ -135,7 +135,9 @@ Android/Kotlin 코드 리뷰 전문 Agent & Skills
 
 | 버전 | 날짜 | 변경사항 |
 |------|------|----------|
-| **v1.2.1** | 2026-01-31 | 🔧 **Skill 구조 개선**<br>• 단일 파일 → 디렉토리 구조로 변경 (확장성 확보)<br>• 모든 skill 파일명을 SKILL.md로 통일<br>• 향후 예제/템플릿/스크립트 추가 가능 |
+| **v1.2.3** | 2026-01-31 | 📝 **문서 개선**<br>• 모든 명령어 형식을 짧은 형식으로 통일<br>• `/review:pr` → `/review-pr` (모든 skill)<br>• 사용자 경험 개선 |
+| v1.2.2 | 2026-01-31 | ✅ **사용자 직접 실행 지원**<br>• 모든 skill에 user-invocable 플래그 추가<br>• 사용자가 `/review-pr` 등 직접 실행 가능<br>• Assistant-only에서 User-invocable로 변경 |
+| v1.2.1 | 2026-01-31 | 🔧 **Skill 구조 개선**<br>• 단일 파일 → 디렉토리 구조로 변경 (확장성 확보)<br>• 모든 skill 파일명을 SKILL.md로 통일<br>• 향후 예제/템플릿/스크립트 추가 가능 |
 | v1.2.0 | 2026-01-31 | 🛠️ **버전 관리 자동화**<br>• bump-version.sh 스크립트 추가<br>• 자동 changelog 생성<br>• manifest 검증 오류 수정 |
 | v1.1.0 | 2026-01-31 | 🎉 **5개 리뷰 스킬 추가**<br>• review-pr: PR 변경사항 코드 리뷰<br>• review-compose: Jetpack Compose 성능 검사<br>• review-architecture: 클린 아키텍처 검증<br>• review-security: 보안 취약점 검사<br>• review-test: 테스트 커버리지 검사<br>• 3단계 이슈 분류 (Critical/Warning/Suggestion)<br>• 다양한 옵션 지원 (--full, --strict, --coverage 등)<br>• CI/CD 통합 가이드 포함 |
 | v1.0.0 | 2026-01-31 | 🚀 **초기 릴리즈**<br>• android-code-reviewer agent 추가<br>• Android/Kotlin 코드베이스 전문 리뷰 에이전트 |
