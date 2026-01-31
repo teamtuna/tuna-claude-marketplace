@@ -140,6 +140,43 @@ Android/Kotlin 코드 리뷰 전문 Agent & Skills
 
 ---
 
+## 개발자 가이드
+
+### 버전 관리
+
+플러그인 버전을 업데이트할 때는 자동화 스크립트를 사용합니다:
+
+```bash
+./scripts/bump-version.sh <plugin-name> <version-type> <changelog-message>
+```
+
+**예시:**
+
+```bash
+# Patch (버그 수정): 1.0.0 → 1.0.1
+./scripts/bump-version.sh android-reviewer patch "Fix manifest validation error"
+
+# Minor (기능 추가): 1.0.0 → 1.1.0
+./scripts/bump-version.sh android-reviewer minor "Add review-performance skill"
+
+# Major (Breaking Change): 1.0.0 → 2.0.0
+./scripts/bump-version.sh android-reviewer major "Refactor skills API"
+```
+
+**자동으로 업데이트되는 항목:**
+1. `plugins/{plugin}/.claude-plugin/plugin.json` - 플러그인 버전
+2. `.claude-plugin/marketplace.json` - marketplace 및 플러그인 버전
+3. `plugins/{plugin}/README.md` - Changelog에 새 버전 항목 추가
+
+**Semantic Versioning 규칙:**
+- **MAJOR**: 호환성이 깨지는 변경 (API 변경, 필수 파라미터 변경)
+- **MINOR**: 하위 호환되는 기능 추가 (새 스킬, 새 옵션)
+- **PATCH**: 하위 호환되는 버그 수정
+
+상세 가이드: [scripts/README.md](scripts/README.md)
+
+---
+
 ## 기여하기
 
 PR 환영합니다! 🎉

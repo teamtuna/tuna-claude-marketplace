@@ -6,14 +6,14 @@
   },
   "metadata": {
     "description": "Team Tuna의 Claude Code 플러그인 모음 - Android 개발 도구",
-    "version": "1.0.0"
+    "version": "1.2.0"
   },
   "plugins": [
     {
       "name": "android-reviewer",
       "source": "./plugins/android-reviewer",
       "description": "Android/Kotlin 코드 리뷰 전문 Agent",
-      "version": "1.0.0",
+      "version": "1.2.0",
       "author": {
         "name": "Team Tuna"
       },

@@ -295,6 +295,15 @@ Data (Repository Impl, DataSource, API)
 
 모든 주목할만한 변경사항은 이 섹션에 문서화됩니다.
 
+### [1.1.1] - 2026-01-31
+
+#### Fixed
+- **plugin.json manifest 수정**
+  - `agents` 필드: 디렉토리 경로 (`./agents/`) → 개별 파일 경로 (`./agents/android-code-reviewer.md`)로 변경
+  - `skills` 필드: 디렉토리 경로 (`./skills/`) → 5개 개별 파일 경로로 명시
+  - "agents: Invalid input" 검증 오류 해결
+  - Claude Code 플러그인 설치 시 정상 작동
+
 ### [1.1.0] - 2026-01-31
 
 #### Added
