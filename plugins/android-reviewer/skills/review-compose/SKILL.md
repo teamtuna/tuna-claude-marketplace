@@ -3,6 +3,7 @@ name: review-compose
 description: Jetpack Compose 성능 및 패턴 검사. Recomposition 최적화, State 관리, Side Effect 사용법 분석.
 allowed-tools: Bash, Read, Grep, Glob
 argument-hint: "[file|directory] [--strict]"
+user-invocable: true
 ---
 
 # Compose Review Skill

@@ -3,6 +3,7 @@ name: review-architecture
 description: 클린 아키텍처 및 모듈 구조 검증. 의존성 방향, 레이어 분리, 패키지 구조 검사.
 allowed-tools: Bash, Read, Grep, Glob
 argument-hint: "[module] [--deps] [--layers]"
+user-invocable: true
 ---
 
 # Architecture Review Skill

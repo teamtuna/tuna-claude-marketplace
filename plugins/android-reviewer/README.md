@@ -295,6 +295,12 @@ Data (Repository Impl, DataSource, API)
 
 모든 주목할만한 변경사항은 이 섹션에 문서화됩니다.
 
+### [1.2.2] - 2026-01-31
+
+#### Fixed
+- Add user-invocable flag to all skills for direct user execution
+
+
 ### [1.2.1] - 2026-01-31
 
 #### Changed

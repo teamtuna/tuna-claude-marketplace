@@ -3,6 +3,7 @@ name: review-test
 description: 테스트 커버리지 및 품질 검사. 변경된 코드의 테스트 존재 여부, 테스트 실행, 커버리지 리포트 생성.
 allowed-tools: Bash, Read, Grep, Glob, Write
 argument-hint: "[module] [--coverage] [--run] [--missing]"
+user-invocable: true
 ---
 
 # Test Review Skill

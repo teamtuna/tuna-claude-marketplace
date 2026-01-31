@@ -3,6 +3,7 @@ name: review-security
 description: Android 보안 취약점 검사. 하드코딩된 키, 민감정보 로깅, 암호화 누락, 인증 우회 등 검출.
 allowed-tools: Bash, Read, Grep, Glob
 argument-hint: "[file|directory] [--strict] [--secrets]"
+user-invocable: true
 ---
 
 # Security Review Skill

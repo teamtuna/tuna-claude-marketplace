@@ -3,6 +3,7 @@ name: review-pr
 description: PR 변경사항 코드 리뷰. git diff 기반으로 변경된 코드를 분석하고 리뷰 코멘트 생성.
 allowed-tools: Bash, Read, Grep, Glob, Write
 argument-hint: "[branch] [--full] [--comment]"
+user-invocable: true
 ---
 
 # PR Review Skill
